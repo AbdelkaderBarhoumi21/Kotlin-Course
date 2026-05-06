@@ -46,4 +46,5 @@ fun main() {
     val s3 = String("Hello".toCharArray())   // force new object in memory
     println("\ns1 == s3  → ${s1 == s3}")     // true  — same content
     println("s1 === s3 → ${s1 === s3}")      // false — different reference in memory
+    println("Compare reference: S1===S2 -> ${s1 === s2}")
 }
