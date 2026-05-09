@@ -1,6 +1,8 @@
 package OOP
 
 //In Kotlin, classes are **final** by default. You must explicitly mark a class as `open` to allow inheritance.
+// Kotlin — inheritance + constructor call = a single line class Success : NetworkResult() =>
+// the () with name of class is the super constructor for other lang like java
 
 // open → allows inheritance (by default, classes are final)
 open class Animal(val name: String, val age: Int) {
