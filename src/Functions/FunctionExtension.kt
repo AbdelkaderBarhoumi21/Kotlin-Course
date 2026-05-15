@@ -1,4 +1,34 @@
 package Functions
+// Extensions are **resolved statically** — they're really top-level functions with the receiver as the first parameter. The compiler translates:
+/*
+fun String.wordCount(): Int = this.trim().split("\\s+".toRegex()).size
+"hello".wordCount()
+*/
+// …into something equivalent to:
+/*
+fun wordCount(receiver: String): Int = receiver.trim().split("\\s+".toRegex()).size
+wordCount("hello")
+ */
+
+/*
+This means extensions don't actually modify the class. Two consequences:
+
+1. **No runtime overhead** beyond a regular function call.
+2. **They're not polymorphic** — extension calls are dispatched based on the *static* type, not the runtime type.
+ */
+
+// **Problem solved:** In Java, to add functionality to a class you don't control (like `String`),
+// you create utility classes (`StringUtils`, `CollectionUtils`...). Kotlin extensions read naturally and IDE autocomplete works seamlessly.
+/*
+// ❌ Java — cannot add methods to String
+// Solution: a static utility class
+public class StringUtils {
+    public static int wordCount(String s) {
+        return s.trim().split("\\s+").length;
+    }
+}
+StringUtils.wordCount("Hello there");  // Awkward
+ */
 
 // Extension property => must be in top level (dont add inside fucntion, or in bloc {})
 val String.firstLetter: Char
