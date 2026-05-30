@@ -82,7 +82,7 @@ fun demonstrateKotlinExceptionHandling() {
 fun main() {
 
     // ── 1. Create a temp file to work with ────────────────────────
-    val tempFile = createTempFile("test", ".txt")
+    val tempFile = java.io.File.createTempFile("test", ".txt")
     tempFile.writeText("Line 1\nLine 2\nLine 3\nLine 4\nLine 5")
     println("=== Temp file created : ${tempFile.path} ===")
 
