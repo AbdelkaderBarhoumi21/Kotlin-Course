@@ -16,6 +16,7 @@
       <root url="jar://$PROJECT_DIR$/libs/kotlin-reflect-1.9.23.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/mockk-agent-jvm-1.13.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/mockk-agent-api-1.13.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/kotlinx-coroutines-test-jvm-1.8.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
