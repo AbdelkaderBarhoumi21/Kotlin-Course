@@ -25,7 +25,7 @@ data class OrderItemDto(
             "qty:$qty,
             "subtotal":${"%.2f".format(subtotal)}
             }
-            """
+            """.trimIndent()
     }
 
 
